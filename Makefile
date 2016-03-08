@@ -1,5 +1,6 @@
 
 PROG=shapeup
+TEST=./$(PROG) -t
 
 all: $(PROG)
 
@@ -12,8 +13,8 @@ clean:
 test: test1 test2 test3
 
 test1: $(PROG)
-	./$(PROG) 0 0 0 0
+	$(TEST) 0 0 0 0
 test2: $(PROG)
-	./$(PROG) 0 14000 0 0
+	$(TEST) 0 14000 0 0
 test3: $(PROG)
-	./$(PROG) 0 0 200 100
+	$(TEST) 0 0 200 100

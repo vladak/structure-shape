@@ -72,7 +72,7 @@ run(char *hard_sec, char *soft_sec, char *hard_kb, char *soft_kb)
 		e.timer_hard_sec = DEFAULT_HARD;
 	else
 		e.timer_hard_sec = atoi(hard_sec);
-		
+
 	if (atoi(soft_sec) == 0)
 		e.timer_soft_sec = DEFAULT_SOFT;
 	else

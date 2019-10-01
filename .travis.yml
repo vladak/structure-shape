@@ -2,11 +2,19 @@ language: C
 matrix:
   include:
     - os: linux
+      dist: xenial
       sudo: false
       compiler: clang
     - os: linux
+      dist: xenial
+      sudo: false
+      compiler: gcc
+    - os: linux
+      # bionic has gcc 7
+      dist: bionic
       sudo: false
       compiler: gcc
     - os: osx
       compiler: clang
+# Travis default script uses ./configure which is not present here.
 script: make && make test

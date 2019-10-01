@@ -1,2 +1,10 @@
 language: C
+matrix:
+  include:
+    - os: linux
+      sudo: false
+      compiler: clang
+    - os: linux
+      sudo: false
+      compiler: gcc
 script: make && make test

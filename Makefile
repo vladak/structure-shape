@@ -5,7 +5,7 @@ TEST=./$(PROG) -t
 all: $(PROG)
 
 $(PROG): struct.c
-	gcc -o $(PROG) $?
+	$(CC) -o $(PROG) $?
 
 clean:
 	rm -f *.o $(PROG)

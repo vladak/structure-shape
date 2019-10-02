@@ -1,11 +1,12 @@
 
 PROG=shapeup
 TEST=./$(PROG) -t
+CFLAGS=-Wall -Wextra
 
 all: $(PROG)
 
 $(PROG): struct.c
-	$(CC) -o $(PROG) $?
+	$(CC) $(CFLAGS) -o $(PROG) $?
 
 clean:
 	rm -f *.o $(PROG)

@@ -1,23 +1,29 @@
 language: C
-matrix:
+jobs:
   include:
-    - os: linux
+    - stage: test
+      os: linux
       name: Xenial + Clang
       dist: xenial
       sudo: false
       compiler: clang
-    - os: linux
+      script: make && make test
+    - stage: test
+      os: linux
       name: Xenial + GCC
       dist: xenial
       sudo: false
       compiler: gcc
-    - os: linux
+      script: make && make test
+    - stage: test
+      os: linux
       name: Bionic + GCC 7
       dist: bionic
       sudo: false
       compiler: gcc
-    - os: osx
+      script: make && make test
+    - stage: test
+      os: osx
       name: macOS + Clang
       compiler: clang
-# Travis default script uses ./configure which is not present here.
-script: make && make test
+      script: make && make test

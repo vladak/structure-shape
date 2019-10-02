@@ -9,23 +9,23 @@ jobs:
       dist: xenial
       sudo: false
       compiler: clang
-      script: make && make test
+      script: ./dev/test.sh
     - stage: test
       os: linux
       name: Xenial + GCC
       dist: xenial
       sudo: false
       compiler: gcc
-      script: make && make test
+      script: ./dev/test.sh
     - stage: test
       os: linux
       name: Bionic + GCC 7
       dist: bionic
       sudo: false
       compiler: gcc
-      script: make && make test
+      script: ./dev/test.sh
     - stage: test
       os: osx
       name: macOS + Clang
       compiler: clang
-      script: make && make test
+      script: ./dev/test.sh

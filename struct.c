@@ -40,12 +40,12 @@
 #include <err.h>
 
 /* minimum difference (in seconds) */
-#define MINDIFF	60
+#define	MINDIFF	60
 /* assume 1 MB/s */
 #define	SECS2KBYTES(x)	((x) << 20)
 /* defaults */
 #define	DEFAULT_HARD	28800	/* 8 hours */
-#define DEFAULT_SOFT	25200	/* 7 hours */
+#define	DEFAULT_SOFT	25200	/* 7 hours */
 
 /*
  * Rules:

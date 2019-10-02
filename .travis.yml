@@ -1,6 +1,8 @@
 language: C
 jobs:
   include:
+    - stage: C style check
+      script: ./dev/style.sh
     - stage: test
       os: linux
       name: Xenial + Clang
